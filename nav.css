@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    margin: auto;
+}
+.inav {
+    margin-left: 20px;
+}
+
+nav{
+    background-color: #1A0B2E;
+    padding: 25px;
+    font-size: 15px;
+}
+
+.inav a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
