@@ -1,0 +1,30 @@
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58vw;
+    min-height: 100vh;
+    background-color: black;
+    z-index: -1;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    /* transform: skewX(-15deg);
+    transform-origin: top left; */
+}
+
+/* .bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10vw; 
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: skewX(15deg);
+} */
+
+/* nav, .name {
+    position: absolute;
+    z-index: 10; 
+    color: white;
+}
+

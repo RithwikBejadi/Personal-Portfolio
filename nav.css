@@ -7,9 +7,10 @@ nav{
 }
 
 nav{
-    background-color: #1A0B2E;
+
     padding: 25px;
     font-size: 15px;
+    z-index: 1;
 }
 
 .inav a{
@@ -20,4 +21,8 @@ nav{
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #D7D7D7;
+    padding: 0;
+    margin: 0;
   }
+
