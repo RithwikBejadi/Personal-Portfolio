@@ -5,23 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rithwik Bejadi</title>
     
-
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="nav.css">
-
 </head>
 <body>
     <div class="bg"></div> 
-    <nav>
-        <div class="inav"><a href="./Files/about.html">About</a></div>
-        <div class="inav"><a href="./Files/projects.html">projects</a></div>
-        <div class="inav"><a href="./Files/experience.html">Experience</a></div>
-        <div class="inav"><a href="./Files/contact.html">Contact Me</a></div>
+    <nav class="scroll-reveal">
+        <div class="inav"><a href="./Files/about.html" class="nav-link">About Me</a></div>
+        <div class="inav"><a href="./Files/projects.html" class="nav-link">Projects</a></div>
+        <div class="inav"><a href="./Files/experience.html" class="nav-link">Experience</a></div>
+        <div class="inav"><a href="./Files/contact.html" class="nav-link contact">Contact Me</a></div>
     </nav>
+
     <div class="name">
-        
-        <h1>Sai Rithwik Bejadi</h1>
-    
+        <p id="hi">Hello, This is</p>
+        <h1 id="typed-name"></h1>
     </div> 
+    
+    <section class="about scroll-reveal">
+        <div class="about-image">
+            <img src="https://avatars.githubusercontent.com/u/77411692?v=4" alt="Sai Rithwik Bejadi">
+        </div>
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>
+                Hello, This is Bejadi Sai Rithwik from Hyderabad, Telangana and I'm currently Pursuing my B.Tech in Computer Science and Engineering from Newton School of Technology, ADYPU
+            </p>
+            <p>
+               I am a Full Stack Developer with a passion for learning and exploring new technologies. I have experience in developing web applications using MERN stack and have worked on projects using React, Node.js, Express.js, MongoDB, and other technologies.
+            </p>
+            <div class="explore-container">
+                <div class="line"></div>
+                <button class="explore-btn">EXPLORE</button>
+                <div class="line"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="techstack scroll-reveal">
+        <h2>Tech Stack</h2>
+        <div class="stack-icons">
+            <img src="icons/html.png" alt="HTML">
+            <img src="icons/css.png" alt="CSS">
+            <img src="icons/js.png" alt="JavaScript">
+            <img src="icons/react.png" alt="React">
+            <img src="icons/nodejs.png" alt="Node.js">
+            <img src="icons/mongodb.png" alt="MongoDB">
+        </div>
+    </section>
+
+
+
+    <script>
+        // Typing Effect
+        const nameText = "Sai Rithwik Bejadi"; 
+        let index = 0;
+
+        function typeEffect() {
+            if (index < nameText.length) {
+                document.getElementById("typed-name").innerHTML += nameText.charAt(index);
+                index++;
+                setTimeout(typeEffect, 150); // Speed of typing
+            }
+        }
+
+        // Start typing animation on page load
+        window.onload = typeEffect;
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".scroll-reveal");
+
+    function revealOnScroll() {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutImage = document.querySelector(".about-image img");
+    const aboutSection = document.querySelector(".about");
+    
+    function handleScroll() {
+        const sectionTop = aboutSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.85) {
+            let scaleValue = Math.min(1.2, 1 + (windowHeight - sectionTop) / windowHeight);
+            aboutImage.style.transform = `scale(${scaleValue})`;
+            aboutImage.style.opacity = "1";
+        } else {
+            aboutImage.style.transform = "scale(1)";
+            aboutImage.style.opacity = "0.7";
+        }
+        
+        if (sectionTop < windowHeight * 0.75) {
+            aboutSection.classList.add("visible");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+});
+
+    </script>
 </body>
 </html>
