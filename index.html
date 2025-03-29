@@ -126,6 +126,22 @@
             </div>
         </div>
     </section>
+
+    <section class="navigation-cards scroll-reveal">
+        <h2>Explore More</h2>
+        <div class="cards-container">
+            <div class="card about-me" onclick="location.href='./Files/about.html'">
+                <h3>About Me</h3>
+            </div>
+            <div class="card experience" onclick="location.href='./Files/experience.html'">
+                <h3>Experience</h3>
+            </div>
+            <div class="card contact-me" onclick="location.href='./Files/contact.html'">
+                <h3>Contact Me</h3>
+            </div>
+        </div>
+    </section>
+    
     
 
 
@@ -187,6 +203,27 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 });
+
+document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+        const cardRect = card.getBoundingClientRect();
+        const centerX = cardRect.left + cardRect.width / 2;
+        const centerY = cardRect.top + cardRect.height / 2;
+        const deltaX = e.clientX - centerX;
+        const deltaY = e.clientY - centerY;
+        const rotateX = (-deltaY / 5).toFixed(2); // Control tilt sensitivity
+        const rotateY = (deltaX / 5).toFixed(2);
+
+        card.style.setProperty("--rotateX", `${rotateX}deg`);
+        card.style.setProperty("--rotateY", `${rotateY}deg`);
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.setProperty("--rotateX", "0deg");
+        card.style.setProperty("--rotateY", "0deg");
+    });
+});
+
 
     </script>
 </body>
