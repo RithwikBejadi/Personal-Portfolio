@@ -9,7 +9,7 @@
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.name{
+.name {
     position: absolute;
     left: 30%;
     top: 45%;
@@ -17,12 +17,6 @@
     font-size: 35px;
     margin: 0;
 }
-
-/* .name {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-} */
 
 #typed-name {
     font-size: 4rem;
@@ -39,7 +33,7 @@
     50% { border-color: transparent; }
 }
 
-.about{
+.about {
     display: flex;
     align-items: center; /* Align items vertically */
     justify-content: flex-start; /* Move everything to the left */
@@ -52,13 +46,6 @@
     margin: 0;
     flex-wrap: wrap;
 }
-
-/* About Section Styling */
-/* .about {
-    text-align: center;
-    padding: 80px 20px;
-    background: #f8f8f8;
-} */
 
 .about-section {
     max-width: 800px;
@@ -118,32 +105,12 @@
 
 .scroll-reveal {
     opacity: 0;
-    /* transform: translateY(50px); */
     transition: all 0.6s ease-out;
 }
 
 .scroll-reveal.visible {
     opacity: 1;
-    /* transform: translateY(0); */
 }
-
-
-.about-image {
-    width: 350px; /* Increase image size */
-    height: auto;
-    transform: scale(1); /* Initial scale */
-    transition: transform 0.3s ease-out; /* Smooth transition */
-    margin-right: 20px; /* Space between image and text */
-}
-
-.about-section {
-    max-width: 600px; /* Limit text width */
-}
-
-
-
-/*###########################/*/
-
 
 .about-image img {
     width: 350px;
@@ -164,4 +131,75 @@
     transform: translateY(0);
 }
 
+/* Tech Stack Section */
+.techstack {
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    top: 160vh;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.techstack h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column; /* Arrange categories vertically */
+    gap: 50px; /* Space between categories */
+    margin-top: 30px;
+}
+
+.category {
+    text-align: center; /* Center headings and content */
+    margin-bottom: 20px;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black; /* Reduced underline thickness */
+    width: fit-content; /* Match underline to text width */
+    padding-bottom: 5px; /* Padding below text */
+}
+
+.stack-icons {
+    display: flex;
+    flex-wrap: wrap; /* Wrap icons onto the next line */
+    justify-content: center; /* Center icons */
+    gap: 80px; /* Increased space between icons */
+    margin-top: 20px;
+}
+
+.stack-icons div {
+    text-align: center;
+    width: 100px; /* Consistent alignment */
+}
+
+.stack-icons img {
+    width: 70px; /* Slightly larger icon size */
+    height: 70px; /* Maintain uniform size */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+.stack-icons img:hover {
+    transform: scale(1.2); /* Enlarges on hover */
+}
+
+.stack-icons p {
+    font-size: 0.9rem; /* Slightly reduced text size */
+    color: rgba(0, 0, 0, 0.6); /* Transparent text */
+    font-weight: normal; /* Unbold styling */
+    margin: 0;
+}

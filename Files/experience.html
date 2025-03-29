@@ -4,8 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="experience.css">
+    <script src="./experience.js" defer></script>
+
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 <body>
+<section class="timeline scroll-reveal">
+    <h2 data-aos="fade-up">My Journey</h2>
+    <div class="timeline-container">
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+                <h3>Class 10</h3>
+                <p>Completed my Class 10 at Bhavan's Sri RamaKrishna Vidyalaya, Medchal, Secunderabad. With 84.2% in Boards</p>
+            </div>
+        </div>
+        <!-- Gallery between Class 10 and Class 12 -->
+        <div class="gallery" data-aos="fade-up">
+            <img src="images/class10_1.jpg" alt="Class 10 image 1">
+            <img src="images/class10_2.jpg" alt="Class 10 image 2">
+            <img src="images/class10_3.jpg" alt="Class 10 image 3">
+            <img src="images/class10_4.jpg" alt="Class 10 image 4">
+            <img src="images/class10_5.jpg" alt="Class 10 image 5">
+            <img src="images/class10_6.jpg" alt="Class 10 image 6">
+            <img src="images/class10_7.jpg" alt="Class 10 image 7">
+            <img src="images/class10_8.jpg" alt="Class 10 image 8">
+            <img src="images/class10_9.jpg" alt="Class 10 image 9">
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+                <h3>Class 12</h3>
+                <p>Completed Class 12 from Narayana Junior College(IIT Academy), Kondapur with percentage of 93.7%</p>
+            </div>
+        </div>
+        <!-- Gallery between Class 12 and JEE Journey -->
+        <div class="gallery" data-aos="fade-up">
+            <img src="images/class12_1.jpg" alt="Class 12 image 1">
+            <img src="images/class12_2.jpg" alt="Class 12 image 2">
+            <img src="images/class12_3.jpg" alt="Class 12 image 3">
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+                <h3>JEE Journey</h3>
+                <p>Got 90%ile in JEE Mains 2024 and Qualified to JEE Advanced. Not Qualified in JEE Advanced</p>
+            </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+                <h3>B.Tech</h3>
+                <p>Secured Seat in Newton School of Technology, ADYPU, With CGPA of 8.91 in Semester 1</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            easing: 'ease-in-out', // Animation easing
+            once: true, // Whether animation should happen only once or every time you scroll
+        });
+
+
+
+    </script>
+    
     
 </body>
 </html>

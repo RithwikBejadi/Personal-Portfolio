@@ -1,0 +1,116 @@
+.timeline {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+.timeline h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 5px 15px;
+    letter-spacing: 1.5px;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 300px; /* Increased spacing between timeline items */
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-date {
+    width: 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    line-height: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.timeline-content {
+    background: #f8f8f8;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; /* Alternate alignment for odd items */
+    text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Auto for horizontal scrolling */
+    padding: 10px 0;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    margin: 30px 0; /* Space between galleries */
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap; /* Prevents wrapping of images */
+    width: 100%; /* Ensures it doesn't stretch beyond its parent */
+    max-width: 100%; /* Ensures it stays within the viewport */
+    box-sizing: border-box; /* Accounts for padding in width */
+}
+
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /* Ensures images look neat */
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    white-space: nowrap; /* Prevents wrapping of images */
+    width: 100%; /* Fits within the parent container */
+}
