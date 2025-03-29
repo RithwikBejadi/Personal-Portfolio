@@ -231,3 +231,39 @@ body {
     font-weight: bold;
     font-size: 4rem;
 }
+.floating-nav {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: rgba(108, 208, 133, 0.8);
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav-links li {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(37, 37, 37, 0.685);
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}

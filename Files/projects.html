@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Rithwik Bejadi - Projects</title>
+    <link rel="stylesheet" href="projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    
+    <div id="particles-js"></div> <!-- Shooting Stars Background -->
+
+    <!-- Navigation -->
+    <nav class="scroll-reveal">
+        <div class="inav"><a href="../index.html" class="nav-link">Home</a></div>
+        <div class="inav"><a href="./about.html" class="nav-link">About</a></div>
+        <div class="inav"><a href="./experience.html" class="nav-link">Experience</a></div>
+        <div class="inav"><a href="./contact.html" class="nav-link contact">Contact Me</a></div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-section scroll-reveal">
+        <h2>PROJECTS</h2>
+        <div class="cards-container">
+            <div class="card project-1">
+                <img src="../imgs3/tekron.png" alt="Project Image">
+                <h3>Tekron Fest</h3>
+                <p>A Website Created for Tekron Fest 2025 Organized by NST X ADYPU.</p>
+                <p>Tech Stack: HTML, CSS, JAVASCRIPT</p>
+                <p>Role: Designer, Responsiveness, Javascript Handling</p>
+                <a href="https://tekronfest.com/" class="live-link" target="_blank" rel="noopener noreferrer">Live Link &#8599;</a>
+            </div>
+            <div class="card project-2">
+                <img src="../imgs3/image.png" alt="Project Image">
+                <h3>Destination Diaries</h3>
+                <p>A Semester Project at NST which shows reviews of famous Landmarks in The world and a few Local Places</p>
+                <p>Tech Stack: HTML, CSS, JavaScript</p>
+                <p>Role: Lead</p>
+                <a href="https://destination-diaries.netlify.app/" class="live-link" target="_blank" rel="noopener noreferrer">Live Link &#8599;</a>
+            </div>
+            <div class="card project-3">
+                <img src="../imgs3/scr.png" alt="Project Image">
+                <h3>Eco Savers</h3>
+                <p>An Award Winning game created using Scratch in a Scratch Game Hackathon which is Environmental Themed and Educational Game</p>
+                <p>Tech Stack: Scratch</p>
+                <p>Role: Lead</p>
+                <a href="https://scratch.mit.edu/projects/1074090295/editor/" class="live-link" target="_blank" rel="noopener noreferrer">Live Link &#8599;</a>
+            </div>
+            <div class="card project-4">
+                <img src="../imgs3/pike.png" alt="Project Image">
+                <h3>Pokémon Battle</h3>
+                <p>A Game created using React where user can choose 2 pokemons(type) and conduct a battle between them in terms of HP and Attack</p>
+                <p>Tech Stack: React, JavaScript, CSS</p>
+                <p>Role: Lead</p>
+                <a href="https://pokemon-battle-rith.netlify.app/" class="live-link" target="_blank" rel="noopener noreferrer">Live Link &#8599;</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="./projects.js"></script>
+    <script>
+    // Dynamic Tilt Effect for Project Cards
+    document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+            const cardRect = card.getBoundingClientRect();
+            const centerX = cardRect.left + cardRect.width / 2;
+            const centerY = cardRect.top + cardRect.height / 2;
+            const deltaX = e.clientX - centerX;
+            const deltaY = e.clientY - centerY;
+            const rotateX = (-deltaY / 20).toFixed(2); // Control tilt sensitivity
+            const rotateY = (deltaX / 20).toFixed(2);
+
+            card.style.setProperty("--rotateX", `${rotateX}deg`);
+            card.style.setProperty("--rotateY", `${rotateY}deg`);
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.setProperty("--rotateX", "0deg");
+            card.style.setProperty("--rotateY", "0deg");
+        });
+    });
+    </script>
 </body>
 </html>
