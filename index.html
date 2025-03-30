@@ -13,12 +13,21 @@
 </head>
 <body>
     <div class="bg"></div> 
-    <nav class="scroll-reveal">
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="scroll-reveal" id="navbar">
         <div class="inav"><a href="./Files/about.html" class="nav-link">About Me</a></div>
         <div class="inav"><a href="./Files/projects.html" class="nav-link">Projects</a></div>
-        <div class="inav"><a href="./Files/experience.html" class="nav-link">Experience</a></div>
+        <div class="inav"><a href="./Files/experience.html" class="nav-link">Education</a></div>
         <div class="inav"><a href="./Files/contact.html" class="nav-link contact">Contact Me</a></div>
     </nav>
+
+    <div class="imgmob">
+        <img src="./imgs2/self3.jpeg" alt="Sai Rithwik Bejadi">
+    </div> 
 
     <div class="name">
         <p id="hi">Hello, This is</p>
@@ -40,6 +49,7 @@
             </div>
         </div>
     </section>
+    
     
     <section class="techstack scroll-reveal">
         <h2>Tech Stack</h2>
@@ -133,7 +143,7 @@
                 <h3>About Me</h3>
             </div>
             <div class="card experience" onclick="location.href='./Files/experience.html'">
-                <h3>Experience</h3>
+                <h3>Education</h3>
             </div>
             <div class="card contact-me" onclick="location.href='./Files/contact.html'">
                 <h3>Contact Me</h3>
@@ -220,6 +230,15 @@ document.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("mouseleave", () => {
         card.style.setProperty("--rotateX", "0deg");
         card.style.setProperty("--rotateY", "0deg");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const navbar = document.getElementById("navbar");
+
+    hamburgerMenu.addEventListener("click", () => {
+        navbar.classList.toggle("nav-visible");
     });
 });
 

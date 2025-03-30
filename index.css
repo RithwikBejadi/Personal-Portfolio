@@ -284,4 +284,125 @@
 .card.contact-me {
     background: linear-gradient(135deg, #1e0101, #cd5c5c); /* Darker shades of red */
 }
+.imgmob{
+    display: none;
+}
+@media (max-width: 768px) {
+    /* Adjust background */
+    .bg {
+        width: 100vw;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* Center and resize name section */
+    .name {
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    #typed-name {
+        font-size: 2rem;
+        border-right: 2px solid white;
+    }
+
+    /* Stack about section vertically */
+    .about {
+        position: relative;
+        left: 0;
+        top: 50vh;
+        flex-direction: column;
+        padding: 20px;
+        text-align: left;
+        margin-right: 40px;
+    }
+
+    .about-section h2 {
+        font-size: 24px;
+        padding: 8px 20px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+
+    /* Adjust explore button */
+    .explore-container {
+        margin-top: 20px;
+    }
+
+    /* Resize images */
+    .about-image img {
+        width: 150px;
+        margin: auto;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+    /* Tech stack adjustments */
+    .techstack {
+        width: 90%;
+        top: 92vh;
+    }
+
+    .categories {
+        gap: 20px;
+    }
+
+    .stack-icons {
+        gap: 30px;
+        margin-top: 10px;
+    }
+
+    .stack-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stack-icons p {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation cards */
+    .navigation-cards {
+        padding: 10px;
+        top: 95vh;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        height: 150px;
+        margin: 10px auto;
+    }
+    .imgmob{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 20px;
+        position: relative;
+        top: 100px;
+        left: 50px;
+        right: 0;
+    }
+    .imgmob img{
+        width: 70%;
+        height: auto;
+        border-radius: 50%;
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    #typed-name {
+        color: white; /* Change text color to white */
+    }
+}
 
