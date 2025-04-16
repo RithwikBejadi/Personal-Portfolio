@@ -14,8 +14,84 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="../loader.css">
     <script src="../loader.js" defer></script>
-    <link rel="stylesheet" href="./experience.css">
 
+    <!-- Inline CSS for Slider -->
+    <style>
+        /* Slider Styles */
+        #GALLERY {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #GALLERY h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .slider-container {
+            width: 100%;
+            max-width: 12000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(250px * 20); /* Total width for 20 slides (10 original + 10 duplicates) */
+            animation: scroll 30s linear infinite;
+        }
+
+        .slide {
+            flex: 0 0 400px; /* Fixed width for each slide */
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Animation for infinite scroll */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 10)); /* Move by the width of original set */
+            }
+        }
+
+        /* Pause animation on hover */
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .slide {
+                flex: 0 0 200px;
+            }
+            .slide-track {
+                width: calc(200px * 20);
+            }
+            @keyframes scroll {
+                100% {
+                    transform: translateX(calc(-200px * 10));
+                }
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,13 +103,13 @@
             <li><a href="./contact.html">Contact</a></li>
         </ul>
     </div>
+
     <!-- Timeline Section -->
     <section class="timeline scroll-reveal">
         <h2 data-aos="fade-up">My Journey</h2>
         <div class="timeline-container">
-            
             <!-- Timeline Item: Class 10 -->
-            <div class="timeline-item"  data-aos="fade-left">
+            <div class="timeline-item" data-aos="fade-left">
                 <div class="timeline-dot"></div>
                 <div class="timeline-line"></div>
                 <div class="timeline-year">2022</div>
@@ -42,7 +118,7 @@
                     <p>Completed my Class 10 at Bhavan's Sri RamaKrishna Vidyalaya, Medchal, Secunderabad. With 84.2% in Boards.</p>
                 </div>
             </div>
-    
+
             <!-- Timeline Item: Class 12 -->
             <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-dot"></div>
@@ -53,7 +129,7 @@
                     <p>Completed Class 12 from Narayana Junior College (IIT Academy), Kondapur with percentage of 93.7%.</p>
                 </div>
             </div>
-    
+
             <!-- Timeline Item: JEE Journey -->
             <div class="timeline-item" data-aos="fade-left">
                 <div class="timeline-dot"></div>
@@ -64,7 +140,7 @@
                     <p>Got 90%ile in JEE Mains 2024 and qualified to JEE Advanced. Not qualified in JEE Advanced.</p>
                 </div>
             </div>
-    
+
             <!-- Timeline Item: B.Tech -->
             <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-dot"></div>
@@ -77,38 +153,34 @@
             </div>
         </div>
     </section>
-    
 
+    <!-- Gallery Section with Fixed Slider -->
     <section id="GALLERY">
         <h1>GALLERY</h1>
         <div class="slider-container">
             <div class="slider">
                 <div class="slide-track">
                     <!-- Original set of images -->
-                    <div class="slide"><img src="../imgs2/award.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/car.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/clas.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/moun.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/fr2.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/fri.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/identity.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/IR.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/mainga.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/awar2.png" alt=""></div>
-                    
-    
+                    <div class="slide"><img src="../imgs2/award.png" alt="Award"></div>
+                    <div class="slide"><img src="../imgs2/car.png" alt="Car"></div>
+                    <div class="slide"><img src="../imgs2/clas.png" alt="Class"></div>
+                    <div class="slide"><img src="../imgs2/moun.png" alt="Mountain"></div>
+                    <div class="slide"><img src="../imgs2/fr2.png" alt="Friend 2"></div>
+                    <div class="slide"><img src="../imgs2/fri.png" alt="Friend"></div>
+                    <div class="slide"><img src="../imgs2/identity.png" alt="Identity"></div>
+                    <div class="slide"><img src="../imgs2/IR.png" alt="IR"></div>
+                    <div class="slide"><img src="../imgs2/mainga.png" alt="Main Gallery"></div>
+
                     <!-- Duplicate set for infinite scroll -->
-                    <div class="slide"><img src="../imgs2/award.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/car.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/clas.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/moun.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/fr2.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/fri.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/identity.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/IR.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/mainga.png" alt=""></div>
-                    <div class="slide"><img src="../imgs2/awar2.png" alt=""></div>
-                    
+                    <div class="slide"><img src="../imgs2/award.png" alt="Award"></div>
+                    <div class="slide"><img src="../imgs2/car.png" alt="Car"></div>
+                    <div class="slide"><img src="../imgs2/clas.png" alt="Class"></div>
+                    <div class="slide"><img src="../imgs2/moun.png" alt="Mountain"></div>
+                    <div class="slide"><img src="../imgs2/fr2.png" alt="Friend 2"></div>
+                    <div class="slide"><img src="../imgs2/fri.png" alt="Friend"></div>
+                    <div class="slide"><img src="../imgs2/identity.png" alt="Identity"></div>
+                    <div class="slide"><img src="../imgs2/IR.png" alt="IR"></div>
+                    <div class="slide"><img src="../imgs2/mainga.png" alt="Main Gallery"></div>
                 </div>
             </div>
         </div>

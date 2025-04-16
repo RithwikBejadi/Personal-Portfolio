@@ -1,13 +1,11 @@
-/* General Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #121212;
     color: white;
-    overflow-y: auto; /* Allow scrolling */
+    overflow-y: auto;
     overflow-x: hidden;
 }
-
 #particles-js {
     position: fixed;
     top: 0;
@@ -16,8 +14,6 @@ body {
     height: 100%;
     z-index: -1;
 }
-
-/* Navigation */
 nav {
     position: fixed;
     top: 20px;
@@ -30,28 +26,21 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
 }
-
 .nav-link {
     color: white;
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 30px;
     transition: background-color 0.3s ease;
-
 }
-
 .nav-link:hover {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
 }
-
-/* Projects Section */
 .projects-section {
     padding: 60px 20px;
     text-align: center;
-    min-height: 150vh; /* Ensure scrolling */
+    min-height: 150vh;
 }
-
 .projects-section h2 {
     font-size: 4rem;
     margin-bottom: 40px;
@@ -59,15 +48,12 @@ nav {
     position: relative;
     top: 40px;
 }
-
 .cards-container {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
-
-/* Project Cards */
 .card {
     position: relative;
     width: 350px;
@@ -82,71 +68,56 @@ nav {
     cursor: pointer;
     top: 60px;
 }
-
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-bottom: 2px solid #d2d2d2;
 }
-
 .card h3 {
     font-size: 1.5rem;
     margin: 15px 0 10px;
 }
-
 .card p {
     font-size: 1rem;
     color: #ddd;
 }
-
-/* Hover Effects */
 .card:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
 }
-
-/* Responsive Design */
+.live-link {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #d4d4d4;
+    color: rgb(43, 43, 43);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.live-link:hover {
+    background-color: #004d99;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 768px) {
     .projects-section h2 {
         font-size: 2rem;
     }
-
     .card {
         width: 100%;
         height: auto;
     }
-
     .card img {
         height: 150px;
     }
-
     .card h3 {
         font-size: 1.2rem;
     }
-
     .card p {
         font-size: 0.9rem;
     }
-}
-
-
-/* Live Link Styling */
-.live-link {
-    display: inline-block;
-    padding: 12px 18px;
-    background: #d4d4d4; /* Blue background */
-    color: rgb(43, 43, 43); /* White text */
-    font-size: 1.2rem;
-    font-weight: 600; /* Slightly bold text */
-    text-decoration: none; /* Remove underline */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover animation */
-}
-
-.live-link:hover {
-    background-color: #004d99; /* Darker blue on hover */
-    transform: translateY(-3px); /* Slight lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }

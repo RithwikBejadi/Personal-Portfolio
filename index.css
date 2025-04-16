@@ -406,3 +406,73 @@
     }
 }
 
+/* Existing index.css styles */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: black;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 150vh; /* Below navigation-cards */
+    height: 30vh;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff; /* White text for contrast against black background */
+    height: 100%;
+}
+
+.footer-left {
+    text-align: left;
+    flex: 1;
+}
+
+.footer-left h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white; /* Vibrant accent color */
+}
+
+.footer-left p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #cccccc; /* Light gray for secondary text */
+}
+
+.footer-left .copyright {
+    font-size: 0.9rem;
+    color: #999999; /* Subtle gray for copyright text */
+}
+
+.footer-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.848);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slight hover effect for interactivity */
+}
+
+.footer-right {
+    flex: 1;
+    /* Empty space on the right */
+}
